@@ -5,8 +5,8 @@
 import os
 import json
 import dictionaryMaintain
-from PyQt5.QtWidgets import *
-from PyQt5.uic import loadUi
+from PyQt6.QtWidgets import *
+from PyQt6.uic import loadUi
 from qt_material import apply_stylesheet  # For theme adjustments
 
 # CLASS DEFINITIONS

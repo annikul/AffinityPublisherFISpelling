@@ -6,13 +6,13 @@
 
 import sys  # For accessing system parameters
 import os  # For file path handling
-from PyQt5 import QtWidgets  # For the Qt functionality
-from PyQt5.QtGui import QDesktopServices  # To show web pages
-from PyQt5.QtCore import QUrl  # For defining the URL of a web page to open
-from PyQt5.uic import loadUi  # For loading the UI file
+from PyQt6 import QtWidgets  # For the Qt functionality
+from PyQt6.QtGui import QDesktopServices  # To show web pages
+from PyQt6.QtCore import QUrl  # For defining the URL of a web page to open
+from PyQt6.uic import loadUi  # For loading the UI file
 from qt_material import QtStyleTools, apply_stylesheet  # For theme adjustments
-import dialogs
-import dictionaryMaintain
+import dialogs # Internal module for dialogs
+import dictionaryMaintain # Internal module for dictionary maintenance
 
 
 # CLASS DEFINITIONS
@@ -31,7 +31,8 @@ class MainWindow(QtWidgets.QMainWindow, QtStyleTools):
         self.setWindowTitle('Sanakirjan ylläpito')
 
         # Create and set the window icon (check mark)
-        iconPixmap = QtWidgets.QStyle.SP_DialogApplyButton
+        # MEMO muista StandardPixmap jos ope käyttää PyQt5 ja sä PyQt6
+        iconPixmap = QtWidgets.QStyle.StandardPixmap.SP_DialogApplyButton
         icon = self.style().standardIcon(iconPixmap)
         self.setWindowIcon(icon)
 
